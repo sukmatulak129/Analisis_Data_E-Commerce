@@ -1,0 +1,5 @@
+Link file yang sudah di upload di GitHub : 
+https://github.com/sukmatulak129/Analisis_Data_E-Commerce
+
+Link Dashboard Streamlit :
+https://eiby5dxeqte7perqyk8plj.streamlit.app/
