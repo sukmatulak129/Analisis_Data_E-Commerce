@@ -7,9 +7,11 @@ import streamlit as st
 st.set_page_config(page_title="E-Commerce Analysis Dashboard", layout="wide")
 
 # --- LOAD DATA ---
+# --- LOAD DATA ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data.csv")
+    url = "https://raw.githubusercontent.com/sukmatulak129/Analisis_Data_E-Commerce/main/dashboard/main_data.csv"
+    df = pd.read_csv(url)
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
     df['month'] = df['order_purchase_timestamp'].dt.month
     df['year'] = df['order_purchase_timestamp'].dt.year
