@@ -9,7 +9,8 @@ st.set_page_config(page_title="E-Commerce Analysis Dashboard", layout="wide")
 # --- LOAD DATA ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("main_data_d.csv")
+    url = "https://raw.githubusercontent.com/sukmatulak129/Analisis_Data_E-Commerce/main/dashboard/main_data.csv"
+    df = pd.read_csv(url)
     df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
     df['month'] = df['order_purchase_timestamp'].dt.month
     df['year'] = df['order_purchase_timestamp'].dt.year
@@ -108,15 +109,3 @@ ax.set_ylabel('Kategori Produk')
 st.pyplot(fig)
 
 st.caption('Copyright (c) Sukma Novianti Tulak 2026')
-
-# --- LOAD DATA ---
-@st.cache_data
-def load_data():
-    url = "https://raw.githubusercontent.com/sukmatulak129/Analisis_Data_E-Commerce/main/dashboard/main_data.csv"
-    df = pd.read_csv(url)
-    df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
-    df['month'] = df['order_purchase_timestamp'].dt.month
-    df['year'] = df['order_purchase_timestamp'].dt.year
-    return df
-
-all_df = load_data() 
