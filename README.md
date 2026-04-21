@@ -17,11 +17,11 @@
 
 ## Instalasi
 ### 1. Setup Environment - Anaconda
-`conda create --name main-ds python= Versi 3.12.3 (Versi yang saya gunakan dalam pengembangan)
+conda create --name main-ds python= Versi 3.12.3 (Versi yang saya gunakan dalam pengembangan)
 
 conda activate main-ds
 
-pip install -r requirements.txt`
+pip install -r requirements.txt
 
 ### 2. Setup Environment - Shell/Terminal
 mkdir proyek_analisis_data
